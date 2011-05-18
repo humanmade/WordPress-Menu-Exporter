@@ -10,7 +10,10 @@
  *
  */
  
-
+/**
+ * Temporarily hacks the nav_menu_item post type to set builtin to false to it shows up under eport options.
+ * 
+ */
 function me_show_menu_post_type_in_export_options() {
 	
 	global $wp_post_types;
@@ -19,6 +22,10 @@ function me_show_menu_post_type_in_export_options() {
 }
 add_action( 'load-export.php', 'me_show_menu_post_type_in_export_options' );
 
+/**
+ * The normal WordPress exporter API does not provide enough hooks etc, so we hijack the export page and run our own.
+ * 
+ */
 function me_catch_menu_export() {
 	
 	if( !isset( $_GET['download'] ) || empty( $_GET['content'] ) || $_GET['content'] !== 'nav_menu_item' )  {
