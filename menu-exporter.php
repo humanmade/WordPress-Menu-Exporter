@@ -5,7 +5,7 @@
  * Plugin URI: http://humanmade.co.uk
  * Description: Lets you only export your WordPress menus
  * Version: 1
- * Author: humanmade
+ * Author: Joe Hoyle - Human Made Limited
  * Author URI: http://humanmade.co.uk/
  *
  */
